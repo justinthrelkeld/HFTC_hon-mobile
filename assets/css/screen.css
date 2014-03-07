@@ -299,7 +299,7 @@ input[type="submit"] {
   .day .date {
     font-weight: normal;
     line-height: 100%;
-    position: fixed;
+    position: absolute;
     text-align: center; }
     .day .date .month {
       display: block;
@@ -320,3 +320,5 @@ input[type="submit"] {
       position: absolute;
       text-align: right;
       width: 100%; }
+    .day .event .organization {
+      font-size: 0.875em; }
