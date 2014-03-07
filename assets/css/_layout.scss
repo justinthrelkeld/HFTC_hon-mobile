@@ -1,0 +1,224 @@
+$side-panel-width: 65%;
+$slide-speed: .8s;
+
+
+// layout
+*{box-sizing: border-box;}
+html{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  @include outer-container;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  #search, #login{
+    background-color: $light-gray;
+    @include media($mobile){
+      @include span-columns($grid-columns/2);
+    }
+    position: absolute;
+    top:0;
+    color: $text-color;
+    a{
+      color: $text-color;
+    }
+  }
+
+  #search{
+    left:0;
+    ul{
+      li{
+        clear: none;
+        float: left;
+        padding: .5em;
+      }
+    }
+  }
+
+  #login{
+    right: 0;
+    li{
+      background-color: $text-color;
+      border-radius: 100%;
+      margin-right: .5em;
+    }
+  }
+
+  #main{
+    @include span-columns($grid-columns);
+    @include pad(0);
+    @include omega();
+    margin: 0;
+    @include transition (margin-left $slide-speed);
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling:touch;
+    background-color: $light-gray;
+  }
+
+  #content{
+    @include pad();
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 5em;
+  }
+}
+
+// universal styling
+
+body{
+  ul.login{
+    float: right;
+    li{
+      width: 45px;
+      height: 45px;
+      float: left;
+    }
+  }
+}
+
+@include media($mobile){
+  #search, #login{
+    overflow: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling:touch;
+    ul{
+    margin-top: 2em;
+      li{
+        height: 45px;
+        margin: 0; padding: 0;
+        margin-bottom: .5em;
+        background-color: inherit;
+        a{
+          color: white;
+          line-height: 2em;
+          text-decoration: none;
+          background-position: bottom;
+        }
+      }
+    }
+  }
+
+  ul.login{
+    width: 100%;
+    float: left;
+    li{
+      clear: both;
+      width: 100%;
+      float: left;
+      overflow: visible;
+      a{
+        width: 100%;
+        text-indent: 50px;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+// OnCanvas
+
+#show-search,
+#show-login{
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  display: none;
+}
+
+#show-search{
+  left: 0;
+}
+#show-login{
+  right: 0;
+}
+
+@include media($mobile){
+  #show-search,
+  #show-login{
+    display: block;
+    visibility: hidden;
+    text-decoration: none;
+    &:before{
+      font-size: 2em;
+      font-family: "FontAwesome";
+      display: block;
+      text-indent: 0;
+      visibility: visible;
+      text-align: right;
+      padding: .5em;
+    }
+  }
+  #show-login{
+    &:before{
+      content: "\f053";
+    }
+  }
+
+  #show-search{
+    &:before{
+      content: "\f0ca";
+    }
+  }
+
+  #search{
+    ul{
+      li{
+        clear: both !important;
+        float: none !important;
+        a{}
+      }
+    }
+  }
+
+  #search, #login{
+    z-index: 10;
+    width: $side-panel-width !important;
+    height: 100%;
+    display: block;
+    background-image: inherit;
+  }
+
+body.show-search, body.show-login{
+  #main{
+    overflow: hidden;
+  }
+}
+
+  body.show-search{
+    #main{
+      margin-left: $side-panel-width;
+    }
+    #login{
+      z-index: -10;
+    }
+    #show-search:before{
+      content: "\f0ca";
+    }
+  }
+
+  body.show-login{
+    #main{
+      margin-left: -$side-panel-width;
+    }
+    #search{
+      z-index: -10;
+    }
+    #show-login:before{
+      content: "\f054";
+    }
+  }
+
+  #main{
+    @include position(relative);
+    z-index: 20;
+  }
+}
