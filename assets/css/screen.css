@@ -265,31 +265,39 @@ dl {
       color: black; }
 
 main {
+  background: #dddddd;
   padding: 0.9375em; }
 
-fieldset {
-  border: 0;
-  background: none;
-  margin: 0 0 0.9375em;
-  padding: 0; }
-  fieldset label {
-    font-size: 0.75em; }
-  fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"] {
-    padding: 0.625em; }
-  fieldset .form-help {
-    font-size: 0.75em;
-    line-height: 125%;
+ul {
+  margin: 0 0 1.875em 1.875em; }
+  ul li {
     margin-bottom: 0.9375em; }
 
-input[type="submit"] {
-  width: 100%;
-  padding: 0.9375em; }
+form {
+  margin-bottom: 1.875em; }
+  form fieldset {
+    border: 0;
+    background: none;
+    margin: 0 0 0.9375em;
+    padding: 0; }
+    form fieldset label {
+      font-size: 0.75em; }
+    form fieldset input[type="text"], form fieldset input[type="email"], form fieldset input[type="password"] {
+      padding: 0.625em; }
+    form fieldset .form-help {
+      font-size: 0.75em;
+      line-height: 125%;
+      margin-bottom: 0.9375em; }
+    form fieldset input[type="submit"] {
+      width: 100%;
+      padding: 0.9375em; }
 
 .day {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.875em;
   position: relative; }
   .day:before, .day:after {
     content: " ";
@@ -312,13 +320,18 @@ input[type="submit"] {
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 17.05961%;
-    position: relative; }
+    border-left: 1px solid #999999; }
     .day .event:last-child {
       margin-right: 0; }
     .day .event a {
-      height: 100%;
-      position: absolute;
-      text-align: right;
-      width: 100%; }
+      background: #dddddd;
+      color: #333333;
+      display: block;
+      padding: 0.625em; }
+      .day .event a:hover {
+        color: #477dca; }
     .day .event .organization {
       font-size: 0.875em; }
+
+.when .date {
+  display: block; }

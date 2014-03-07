@@ -1,5 +1,6 @@
 .day {
   @include outer-container;
+  margin-bottom: em(30);
   position: relative;
 
   .date {
@@ -19,13 +20,16 @@
   .event {
     @include span-columns(10);
     @include shift(2);
-    position: relative;
+    border-left: 1px solid $medium-gray;
 
     a {
-      height: 100%;
-      position: absolute;
-      text-align: right;
-      width: 100%;
+      background: $light-gray;
+      color: $dark-gray;
+      display: block;
+      padding: em(10);
+      &:hover {
+        color: $blue;
+      }
     }
 
     .organization {
