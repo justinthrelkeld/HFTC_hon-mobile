@@ -1,0 +1,31 @@
+.day {
+  @include outer-container;
+  position: relative;
+
+  .date {
+    font-weight: normal;
+    line-height: 100%;
+    position: fixed;
+    text-align: center;
+
+    .month {
+      display: block;
+      font-size: em(8);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .event {
+    @include span-columns(10);
+    @include shift(2);
+    position: relative;
+
+    a {
+      height: 100%;
+      position: absolute;
+      text-align: right;
+      width: 100%;
+    }
+  }
+}

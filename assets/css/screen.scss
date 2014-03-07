@@ -2,3 +2,10 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "bitters/bitters";
+
+// Pages
+@import "pages/globals";
+@import "pages/calendar";
+@import "pages/event";
+@import "pages/login";
+@import "pages/register";

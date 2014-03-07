@@ -1,7 +1,51 @@
-<!--DAY-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <!--@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")-->
+        <link href="assets/css/normalize.css" media="all" rel="stylesheet" type="text/css">
+        <link href="assets/css/screen.css" media="all" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!--@RenderSection("featured", required: false)
+                @RenderBody()-->
+          <!--DAY-->
 <section class="day">
-  <h1 class="date">Mar <span class="day">7</span></h1>
+  <h1 class="date"><span class="month">Mar</span> 7</h1>
   <!--EVENT-->
+  <article class="event">
+    <a href="#" title="Title of event">&raquo;</a>
+    <div class="info">
+      <h2 class="title">Title of event</h2>
+      <h3 class="organization">Org Name</h3>
+      <p class="time">4:30<span>pm</span></p>
+    </div>
+  </article><!-- /EVENT -->
+
   <article class="event">
     <a href="#" title="Title of event">&raquo;</a>
     <div class="info">
@@ -115,7 +159,7 @@
 
   <fieldset>
     <label for="retype-email">Retype Email Address</label>
-    <input type="retype-email" id="retype-email" class="form-text" />
+    <input type="email" id="retype-email" class="form-text" />
   </fieldset>
 
   <fieldset>
@@ -126,7 +170,7 @@
 
   <fieldset>
     <label for="retype-password">Retype Password</label>
-    <input type="retype-password" id="retype-password" class="form-text" />
+    <input type="password" id="retype-password" class="form-text" />
   </fieldset>
 
   <fieldset class="check">
@@ -143,3 +187,16 @@
     <input type="submit" value="Submit" />
   </fieldset><!-- /SUBMIT -->
 </form><!-- /REGISTRATION FORM -->
+        </main>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
