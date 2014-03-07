@@ -279,7 +279,7 @@ dl {
     .success a:hover, #flash_success a:hover {
       color: black; }
 
-#main {
+main {
   padding: 0.9375em; }
 
 ul {
@@ -299,8 +299,6 @@ form {
     form fieldset input[type="text"], form fieldset input[type="email"], form fieldset input[type="password"] {
       padding: 0.625em;
       resize: none; }
-    form fieldset.check {
-      margin-bottom: 0.9375em; }
     form fieldset .form-help {
       font-size: 0.75em;
       line-height: 125%;
@@ -403,20 +401,20 @@ body {
     display: table; }
   body:after {
     clear: both; }
-  body #search, body #login {
+  body #search, body #menu {
     background-color: #dddddd;
     position: absolute;
     top: 0;
     color: #5f574f; }
     @media screen and (max-width: 480px) {
-      body #search, body #login {
+      body #search, body #menu {
         float: left;
         display: block;
         margin-right: 7.42297%;
         width: 46.28851%; }
-        body #search:last-child, body #login:last-child {
+        body #search:last-child, body #menu:last-child {
           margin-right: 0; } }
-    body #search a, body #login a {
+    body #search a, body #menu a {
       color: #5f574f; }
   body #search {
     left: 0; }
@@ -424,9 +422,9 @@ body {
       clear: none;
       float: left;
       padding: .5em; }
-  body #login {
+  body #menu {
     right: 0; }
-    body #login li {
+    body #menu li {
       background-color: #5f574f;
       border-radius: 100%;
       margin-right: .5em; }
@@ -454,46 +452,46 @@ body {
     margin: 0 auto;
     margin-top: 5em; }
 
-body ul.login {
+body ul.menu {
   float: right; }
-  body ul.login li {
+  body ul.menu li {
     width: 45px;
     height: 45px;
     float: left; }
 
 @media screen and (max-width: 480px) {
-  #search, #login {
+  #search, #menu {
     overflow: scroll;
     height: 100%;
     -webkit-overflow-scrolling: touch; }
-    #search ul, #login ul {
+    #search ul, #menu ul {
       margin-top: 2em; }
-      #search ul li, #login ul li {
+      #search ul li, #menu ul li {
         height: 45px;
         margin: 0;
         padding: 0;
         margin-bottom: .5em;
         background-color: inherit; }
-        #search ul li a, #login ul li a {
+        #search ul li a, #menu ul li a {
           color: white;
           line-height: 2em;
           text-decoration: none;
           background-position: bottom; }
 
-  ul.login {
+  ul.menu {
     width: 100%;
     float: left; }
-    ul.login li {
+    ul.menu li {
       clear: both;
       width: 100%;
       float: left;
       overflow: visible; }
-      ul.login li a {
+      ul.menu li a {
         width: 100%;
         text-indent: 50px;
         overflow: visible; } }
 #show-search,
-#show-login {
+#show-menu {
   position: absolute;
   z-index: 30;
   top: 0;
@@ -502,17 +500,17 @@ body ul.login {
 #show-search {
   left: 0; }
 
-#show-login {
+#show-menu {
   right: 0; }
 
 @media screen and (max-width: 480px) {
   #show-search,
-  #show-login {
+  #show-menu {
     display: block;
     visibility: hidden;
     text-decoration: none; }
     #show-search:before,
-    #show-login:before {
+    #show-menu:before {
       font-size: 2em;
       font-family: "FontAwesome";
       display: block;
@@ -521,7 +519,7 @@ body ul.login {
       text-align: right;
       padding: .5em; }
 
-  #show-login:before {
+  #show-menu:before {
     content: "\f053"; }
 
   #show-search:before {
@@ -531,28 +529,28 @@ body ul.login {
     clear: both !important;
     float: none !important; }
 
-  #search, #login {
+  #search, #menu {
     z-index: 10;
     width: 65% !important;
     height: 100%;
     display: block;
     background-image: inherit; }
 
-  body.show-search #main, body.show-login #main {
+  body.show-search #main, body.show-menu #main {
     overflow: hidden; }
 
   body.show-search #main {
     margin-left: 65%; }
-  body.show-search #login {
+  body.show-search #menu {
     z-index: -10; }
   body.show-search #show-search:before {
     content: "\f0ca"; }
 
-  body.show-login #main {
+  body.show-menu #main {
     margin-left: -65%; }
-  body.show-login #search {
+  body.show-menu #search {
     z-index: -10; }
-  body.show-login #show-login:before {
+  body.show-menu #show-menu:before {
     content: "\f054"; }
 
   #main {

@@ -18,7 +18,7 @@ body{
   height: 100%;
   overflow: hidden;
 
-  #search, #login{
+  #search, #menu{
     background-color: $light-gray;
     @include media($mobile){
       @include span-columns($grid-columns/2);
@@ -42,7 +42,7 @@ body{
     }
   }
 
-  #login{
+  #menu{
     right: 0;
     li{
       background-color: $text-color;
@@ -75,7 +75,7 @@ body{
 // universal styling
 
 body{
-  ul.login{
+  ul.menu{
     float: right;
     li{
       width: 45px;
@@ -86,7 +86,7 @@ body{
 }
 
 @include media($mobile){
-  #search, #login{
+  #search, #menu{
     overflow: scroll;
     height: 100%;
     -webkit-overflow-scrolling:touch;
@@ -107,7 +107,7 @@ body{
     }
   }
 
-  ul.login{
+  ul.menu{
     width: 100%;
     float: left;
     li{
@@ -127,7 +127,7 @@ body{
 // OnCanvas
 
 #show-search,
-#show-login{
+#show-menu{
   position: absolute;
   z-index: 30;
   top: 0;
@@ -137,13 +137,13 @@ body{
 #show-search{
   left: 0;
 }
-#show-login{
+#show-menu{
   right: 0;
 }
 
 @include media($mobile){
   #show-search,
-  #show-login{
+  #show-menu{
     display: block;
     visibility: hidden;
     text-decoration: none;
@@ -157,7 +157,7 @@ body{
       padding: .5em;
     }
   }
-  #show-login{
+  #show-menu{
     &:before{
       content: "\f053";
     }
@@ -179,7 +179,7 @@ body{
     }
   }
 
-  #search, #login{
+  #search, #menu{
     z-index: 10;
     width: $side-panel-width !important;
     height: 100%;
@@ -187,7 +187,7 @@ body{
     background-image: inherit;
   }
 
-body.show-search, body.show-login{
+body.show-search, body.show-menu{
   #main{
     overflow: hidden;
   }
@@ -197,7 +197,7 @@ body.show-search, body.show-login{
     #main{
       margin-left: $side-panel-width;
     }
-    #login{
+    #menu{
       z-index: -10;
     }
     #show-search:before{
@@ -205,14 +205,14 @@ body.show-search, body.show-login{
     }
   }
 
-  body.show-login{
+  body.show-menu{
     #main{
       margin-left: -$side-panel-width;
     }
     #search{
       z-index: -10;
     }
-    #show-login:before{
+    #show-menu:before{
       content: "\f054";
     }
   }

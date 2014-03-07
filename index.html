@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+  <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width" />
+  <!--
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  -->
+  <link rel="stylesheet" href="assets/css/screen.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/site.js"></script>
+</head>
+<body class="oncanvas">
+  <div id="main">
+    <header>
+      <a href="#menu" id="show-menu">menu</a>
+      <a href="#search" id="show-search">search</a>
+      <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
+    </header>
+    <!-- @RenderSection("featured", required: false) -->
+
+<!--DAY-->
+<section class="day">
+  <h1 class="date"><span class="month">Mar</span> 7</h1>
+  <!-- EVENT -->
+  <article class="event">
+    <a href="#" title="Title of event">
+      <div class="info">
+        <h2 class="title">Title of event</h2>
+        <h3 class="organization">Org Name</h3>
+        <p class="time">4:30<span>pm</span></p>
+      </div>
+    </a>
+  </article><!-- /EVENT -->
+</section><!-- /DAY -->
+
+<!--EVENT DETAILS-->
+<section class="event-details">
+  <h1 class="title">Title of event</h1>
+  <p class="availability"><strong>Spots Remaining:</strong> <span class="available">8</span></p>
+  <p class="when"><span class="date">Friday March 7, 2014</span> <span class="time">12:30PM - 2:30PM</span></p>
+  <p class="organization"><strong>Organization:</strong> <a href="#" title="Organization Name">Hands On Nashville</a></p>
+  <p class="location"><strong>Location:</strong> Nashville, TN 37212</p>
+  <p class="description">Raw denim blog forage plaid. Vegan American Apparel readymade meh keffiyeh. Cliche scenester seitan mumblecore drinking vinegar. Yr Helvetica kitsch typewriter, selvage tattooed post-ironic trust fund chambray. YOLO raw denim XOXO semiotics, try-hard quinoa letterpress disrupt beard hella mlkshk. Cosby sweater sriracha tote bag biodiesel, irony letterpress ugh scenester artisan Intelligentsia actually cliche craft beer Vice. Seitan kogi semiotics butcher farm-to-table 8-bit, tofu church-key beard art party biodiesel messenger bag YOLO.</p>
+  <p class="leader"><strong>Opportunity Leader:</strong> <span class="name">Deborah Harry</span> <a href="#" title="Email">Email</a></p>
+  <p><strong>Requirements</strong></p>
+  <ul class="requirements">
+    <li class="requirement"><strong>Age minimum with adult:</strong> <span class="age">6</span></li>
+    <li class="requirement"><strong>Age minimum:</strong> <span class="age">16+</span></li>
+  </ul>
+  <form action="/">
+    <fieldset class="form-actions">
+      <input type="submit" value="Login" />
+    </fieldset>
+  </form>
+</section><!-- /EVENT DETAILS-->
+
+<!-- LOGIN FORM -->
+<form action="/">
+  <fieldset>
+    <!--<label for="email">Email</label> -->
+    <input type="email" id="email" class="form-text" placeholder="Email Address" />
+  </fieldset>
+
+  <fieldset>
+    <!--<label for="password">Password</label>-->
+    <input type="password" id="password" class="form-text" placeholder="Password"/>
+    <p class="form-help"><a href="#">Forgot your password?</a></p>
+  </fieldset>
+
+  <fieldset class="form-actions">
+    <input type="submit" value="Login" />
+  </fieldset>
+</form><!-- /LOGIN FORM -->
+
+<!-- REGISTRATION FORM -->
+<form action="/">
+  <!-- ABOUT YOU -->
+  <fieldset>
+    <!--<label for="first-name">First Name</label>-->
+    <input type="text" id="first-name" class="form-text" placeholder="First Name"/>
+  </fieldset>
+
+  <fieldset>
+    <!--<label for="last-name">Last Name</label>-->
+    <input type="text" id="last-name" class="form-text" placeholder="Last Name"/>
+  </fieldset>
+  <div class="dob">
+    <fieldset>
+      <!-- <label for="month">Month</label> -->
+      <select id="month">
+        <option>Month</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <!-- <label for="day">Day</label> -->
+      <select id="day">
+        <option>Day</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <!--<label for="year">Year</label>-->
+      <input type="text" id="year" class="form-text" placeholder="Year(YYYY)"/>
+    </fieldset>
+  </div><!-- /ABOUT YOU -->
+
+  <!-- LOCATION -->
+
+  <fieldset>
+    <!--<label for="street">Home Street</label>-->
+    <input type="text" id="street" class="form-text" placeholder="Street Address"/>
+  </fieldset>
+
+  <fieldset>
+    <!-- <label for="city">Home City</label> -->
+    <input type="text" id="city" class="form-text" placeholder="City"/>
+  </fieldset>
+
+  <fieldset class="half">
+    <!-- <label for="state">State</label> -->
+    <select id="state">
+      <option>State</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="half">
+    <!-- <label for="zip">Zip</label> -->
+    <input type="text" id="zip" class="form-text" placeholder="Zip Code"/>
+  </fieldset><!-- /LOCATION -->
+
+  <!-- EMAIL, PASSWORD & COMMUNICATION -->
+  <fieldset>
+    <!-- <label for="email">Email</label> -->
+    <input type="email" id="email" class="form-text" placeholder="Email Address"/>
+  </fieldset>
+
+  <fieldset>
+    <!-- <label for="retype-email">Retype Email Address</label> -->
+    <input type="email" id="retype-email" class="form-text" placeholder="Retype Email Address"/>
+  </fieldset>
+
+  <fieldset>
+    <!-- <label for="password">Password</label> -->
+    <input type="password" id="password" class="form-text" placeholder="Password"/>
+  </fieldset>
+
+  <fieldset>
+    <!-- <label for="retype-password">Retype Password</label> -->
+    <input type="password" id="retype-password" class="form-text" placeholder="Retype Password"/>
+  </fieldset>
+
+  <fieldset class="check">
+    <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Nashville.</label>
+  </fieldset>
+
+  <fieldset class="check">
+    <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Network.</label>
+  </fieldset><!-- /EMAIL, PASSWORD & COMMUNICATION -->
+
+  <!-- SUBMIT -->
+  <fieldset class="form-actions">
+    <p class="form-help">By clicking ‘Submit’ below, you are indicating your acceptance with the Terms and Conditions for this site. <a href="#" title="Terms and Conditions">Click Here to view the Terms And Conditions</a>.</p>
+    <input type="submit" value="Submit" />
+  </fieldset><!-- /SUBMIT -->
+</form><!-- /REGISTRATION FORM -->
+            <footer>
+      <div class="footer--partners__poweredby">
+        <p><span class="hon_img img_title_poweredby"><span class="hon_span_hiden">Powered By</span></span></p>
+        <ul class="inline">
+          <li class="first"><a class="hon_img img_logos_hon" href="http://www.handsonconnect.org" target="_blank"><span class="hon_span_hiden">HandsOn Connect</span></a></li>
+          <li class="last"><a class="hon_img img_logos_honet" href="http://www.handsonnetwork.org" target="_blank"><span class="hon_span_hiden">HandsOn Network</span></a></li>
+        </ul>
+      </div>
+      <div class="footer--partners__sponsors">
+        <a href="/HOC__Sponsors" target="_blank"><img src="/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&amp;id=015A0000001FM5VIAW" height="56" width="592"></a>
+        <a class="rover link_seeallsponsors" href="/HOC__Sponsors" target="_blank">See all sponsors</a>
+      </div>
+      <div class="footer--copyright">
+        <p>©2014 Hands On Nashville, <label id="j_id0:Page:footerTxt">an affiliate of the <a target="_blank" href="http://www.handsonnetwork.org">HandsOn Network</a></label></p>
+        <p>Hands On Nashville, 37 Peabody Street, Suite 206 | Nashville, TN 37210 <span class="hon_img img_footer_sep"></span> <a href="/HOC__Privacy_Policy" target="_blank">Privacy Policy</a> <span class="hon_img img_footer_sep"></span> <a href="/HOC__Terms_and_Conditions" target="_blank">Terms of Use</a></p>
+      </div>
+    </footer>
+  </div>
+  <section id="menu">
+    @Html.Partial("_LoginPartial")
+    <nav id="nav">
+      <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+      </ul>
+    </nav>
+  </section>
+  <section id="search">
+    <input type="text" />
+  </section>
+
+  <!--
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+  -->
+  <script>
+    onCanvas();
+  </script>
+</body>
+</html>
