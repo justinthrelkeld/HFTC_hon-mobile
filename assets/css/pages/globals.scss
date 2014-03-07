@@ -30,6 +30,10 @@ form {
       resize: none;
     }
 
+    &.check {
+      margin-bottom: em(15);
+    }
+
     .form-help {
       font-size: em(12);
       line-height: 125%;
