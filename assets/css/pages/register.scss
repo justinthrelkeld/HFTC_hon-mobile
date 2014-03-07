@@ -1,0 +1,11 @@
+.half {
+  @include span-columns(6);
+  @include omega(odd);
+}
+
+.dob {
+  @include row(block);
+  fieldset {
+    @include span-columns(4);
+  }
+}

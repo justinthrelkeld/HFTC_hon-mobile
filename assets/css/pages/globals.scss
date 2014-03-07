@@ -1,5 +1,4 @@
 main {
-  background: $light-gray;
   padding: em(15);
 }
 
@@ -14,20 +13,21 @@ ul {
 //FORMS
 
 form {
-  margin-bottom: em(30);
+  margin-bottom: em(45);
 
   fieldset {
   border:0;
   background:none;
-  margin: 0 0 em(15);
+  margin: 0 0 em(30);
   padding:0;
 
     label {
-      font-size: em(12);
+      font-size: em(13);
     }
 
     input[type="text"], input[type="email"], input[type="password"] {
       padding: em(10);
+      resize: none;
     }
 
     .form-help {
@@ -35,6 +35,10 @@ form {
       line-height: 125%;
       margin-bottom: em(15);
     }
+    select {
+      margin: em(8) 0 0;
+    }
+
     input[type="submit"] {
       width: 100%;
       padding: em(15);

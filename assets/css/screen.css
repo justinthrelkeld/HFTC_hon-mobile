@@ -265,7 +265,6 @@ dl {
       color: black; }
 
 main {
-  background: #dddddd;
   padding: 0.9375em; }
 
 ul {
@@ -274,20 +273,23 @@ ul {
     margin-bottom: 0.9375em; }
 
 form {
-  margin-bottom: 1.875em; }
+  margin-bottom: 2.8125em; }
   form fieldset {
     border: 0;
     background: none;
-    margin: 0 0 0.9375em;
+    margin: 0 0 1.875em;
     padding: 0; }
     form fieldset label {
-      font-size: 0.75em; }
+      font-size: 0.8125em; }
     form fieldset input[type="text"], form fieldset input[type="email"], form fieldset input[type="password"] {
-      padding: 0.625em; }
+      padding: 0.625em;
+      resize: none; }
     form fieldset .form-help {
       font-size: 0.75em;
       line-height: 125%;
       margin-bottom: 0.9375em; }
+    form fieldset select {
+      margin: 0.5em 0 0; }
     form fieldset input[type="submit"] {
       width: 100%;
       padding: 0.9375em; }
@@ -324,7 +326,6 @@ form {
     .day .event:last-child {
       margin-right: 0; }
     .day .event a {
-      background: #dddddd;
       color: #333333;
       display: block;
       padding: 0.625em; }
@@ -335,3 +336,29 @@ form {
 
 .when .date {
   display: block; }
+
+.half {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .half:last-child {
+    margin-right: 0; }
+  .half:nth-child(odd) {
+    margin-right: 0; }
+
+.dob {
+  *zoom: 1;
+  display: block; }
+  .dob:before, .dob:after {
+    content: " ";
+    display: table; }
+  .dob:after {
+    clear: both; }
+  .dob fieldset {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .dob fieldset:last-child {
+      margin-right: 0; }
