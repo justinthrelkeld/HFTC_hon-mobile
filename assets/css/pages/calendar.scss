@@ -1,0 +1,38 @@
+.day {
+  @include outer-container;
+  margin-bottom: em(30);
+  position: relative;
+
+  .date {
+    font-weight: normal;
+    line-height: 100%;
+    position: absolute;
+    text-align: center;
+
+    .month {
+      display: block;
+      font-size: em(8);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .event {
+    @include span-columns(10);
+    @include shift(2);
+    border-left: 1px solid $medium-gray;
+
+    a {
+      color: $dark-gray;
+      display: block;
+      padding: em(10);
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .organization {
+      font-size: em(14);
+    }
+  }
+}
