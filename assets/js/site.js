@@ -3,10 +3,7 @@ function onCanvas(){
     $('body').toggleClass('show-search');
   });
 
-  $('#show-login').on('click', function(){
-    $('body').toggleClass('show-login');
+  $('#show-menu').on('click', function(){
+    $('body').toggleClass('show-menu');
   });
-  // $('#show-login').on('click', function(){
-  //   $('body').removeClass('show-login, show-search');
-  // };
 }

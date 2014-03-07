@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        <!--@Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")-->
-        <link href="assets/css/normalize.css" media="all" rel="stylesheet" type="text/css">
-        <link href="assets/css/screen.css" media="all" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main>
-            <!--@RenderSection("featured", required: false)
-                @RenderBody()-->
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+  <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width" />
+  <!--
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  -->
+  <link rel="stylesheet" href="assets/css/screen.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/site.js"></script>
+</head>
+<body class="oncanvas">
+  <div id="main">
+    <header>
+      <a href="#menu" id="show-menu">menu</a>
+      <a href="#search" id="show-search">search</a>
+      <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
+    </header>
+    <!-- @RenderSection("featured", required: false) -->
+
 <!--DAY-->
 <section class="day">
   <h1 class="date"><span class="month">Mar</span> 7</h1>
@@ -179,16 +168,44 @@
     <input type="submit" value="Submit" />
   </fieldset><!-- /SUBMIT -->
 </form><!-- /REGISTRATION FORM -->
-        </main>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
+            <footer>
+      <div class="footer--partners__poweredby">
+        <p><span class="hon_img img_title_poweredby"><span class="hon_span_hiden">Powered By</span></span></p>
+        <ul class="inline">
+          <li class="first"><a class="hon_img img_logos_hon" href="http://www.handsonconnect.org" target="_blank"><span class="hon_span_hiden">HandsOn Connect</span></a></li>
+          <li class="last"><a class="hon_img img_logos_honet" href="http://www.handsonnetwork.org" target="_blank"><span class="hon_span_hiden">HandsOn Network</span></a></li>
+        </ul>
+      </div>
+      <div class="footer--partners__sponsors">
+        <a href="/HOC__Sponsors" target="_blank"><img src="/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&amp;id=015A0000001FM5VIAW" height="56" width="592"></a>
+        <a class="rover link_seeallsponsors" href="/HOC__Sponsors" target="_blank">See all sponsors</a>
+      </div>
+      <div class="footer--copyright">
+        <p>©2014 Hands On Nashville, <label id="j_id0:Page:footerTxt">an affiliate of the <a target="_blank" href="http://www.handsonnetwork.org">HandsOn Network</a></label></p>
+        <p>Hands On Nashville, 37 Peabody Street, Suite 206 | Nashville, TN 37210 <span class="hon_img img_footer_sep"></span> <a href="/HOC__Privacy_Policy" target="_blank">Privacy Policy</a> <span class="hon_img img_footer_sep"></span> <a href="/HOC__Terms_and_Conditions" target="_blank">Terms of Use</a></p>
+      </div>
+    </footer>
+  </div>
+  <section id="menu">
+    @Html.Partial("_LoginPartial")
+    <nav id="nav">
+      <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+      </ul>
+    </nav>
+  </section>
+  <section id="search">
+    <input type="text" />
+  </section>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+  <!--
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+  -->
+  <script>
+    onCanvas();
+  </script>
+</body>
 </html>

@@ -1,3 +1,18 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia; }
+
+h1 {
+  font-size: 2.7em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.7em; }
+
+h4 {
+  font-size: 1.3em; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -362,3 +377,182 @@ form {
     width: 31.76157%; }
     .dob fieldset:last-child {
       margin-right: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
+body {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  body:before, body:after {
+    content: " ";
+    display: table; }
+  body:after {
+    clear: both; }
+  body #search, body #menu {
+    background-color: #dddddd;
+    position: absolute;
+    top: 0;
+    color: #5f574f; }
+    @media screen and (max-width: 480px) {
+      body #search, body #menu {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 46.28851%; }
+        body #search:last-child, body #menu:last-child {
+          margin-right: 0; } }
+    body #search a, body #menu a {
+      color: #5f574f; }
+  body #search {
+    left: 0; }
+    body #search ul li {
+      clear: none;
+      float: left;
+      padding: .5em; }
+  body #menu {
+    right: 0; }
+    body #menu li {
+      background-color: #5f574f;
+      border-radius: 100%;
+      margin-right: .5em; }
+  body #main {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+    margin: 0;
+    -webkit-transition: margin-left 0.8s;
+    -moz-transition: margin-left 0.8s;
+    transition: margin-left 0.8s;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #dddddd; }
+    body #main:last-child {
+      margin-right: 0; }
+  body #content {
+    padding: 2.35765%;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 5em; }
+
+body ul.menu {
+  float: right; }
+  body ul.menu li {
+    width: 45px;
+    height: 45px;
+    float: left; }
+
+@media screen and (max-width: 480px) {
+  #search, #menu {
+    overflow: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch; }
+    #search ul, #menu ul {
+      margin-top: 2em; }
+      #search ul li, #menu ul li {
+        height: 45px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: .5em;
+        background-color: inherit; }
+        #search ul li a, #menu ul li a {
+          color: white;
+          line-height: 2em;
+          text-decoration: none;
+          background-position: bottom; }
+
+  ul.menu {
+    width: 100%;
+    float: left; }
+    ul.menu li {
+      clear: both;
+      width: 100%;
+      float: left;
+      overflow: visible; }
+      ul.menu li a {
+        width: 100%;
+        text-indent: 50px;
+        overflow: visible; } }
+#show-search,
+#show-menu {
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  display: none; }
+
+#show-search {
+  left: 0; }
+
+#show-menu {
+  right: 0; }
+
+@media screen and (max-width: 480px) {
+  #show-search,
+  #show-menu {
+    display: block;
+    visibility: hidden;
+    text-decoration: none; }
+    #show-search:before,
+    #show-menu:before {
+      font-size: 2em;
+      font-family: "FontAwesome";
+      display: block;
+      text-indent: 0;
+      visibility: visible;
+      text-align: right;
+      padding: .5em; }
+
+  #show-menu:before {
+    content: "\f053"; }
+
+  #show-search:before {
+    content: "\f0ca"; }
+
+  #search ul li {
+    clear: both !important;
+    float: none !important; }
+
+  #search, #menu {
+    z-index: 10;
+    width: 65% !important;
+    height: 100%;
+    display: block;
+    background-image: inherit; }
+
+  body.show-search #main, body.show-menu #main {
+    overflow: hidden; }
+
+  body.show-search #main {
+    margin-left: 65%; }
+  body.show-search #menu {
+    z-index: -10; }
+  body.show-search #show-search:before {
+    content: "\f0ca"; }
+
+  body.show-menu #main {
+    margin-left: -65%; }
+  body.show-menu #search {
+    z-index: -10; }
+  body.show-menu #show-menu:before {
+    content: "\f054"; }
+
+  #main {
+    position: relative;
+    z-index: 20; } }
