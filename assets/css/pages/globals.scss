@@ -1,4 +1,4 @@
-main {
+#main {
   padding: em(15);
 }
 
@@ -28,6 +28,10 @@ form {
     input[type="text"], input[type="email"], input[type="password"] {
       padding: em(10);
       resize: none;
+    }
+
+    &.check {
+      margin-bottom: em(15);
     }
 
     .form-help {
