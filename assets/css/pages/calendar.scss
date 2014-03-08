@@ -2,12 +2,20 @@
   @include outer-container;
   margin-bottom: em(30);
   position: relative;
+  overflow: hidden;
 
   .date {
     font-weight: normal;
     line-height: 100%;
     position: absolute;
     text-align: center;
+    background-color: $light-gray;
+    z-index: 10;
+    &.stuck{
+      top: 0px;
+      position: fixed;
+      z-index: 5;
+    }
 
     .month {
       display: block;
@@ -21,6 +29,9 @@
     @include span-columns(10);
     @include shift(2);
     border-left: 1px solid $medium-gray;
+    h2{
+      font-size: 1.2em;
+    }
 
     a {
       color: $dark-gray;
