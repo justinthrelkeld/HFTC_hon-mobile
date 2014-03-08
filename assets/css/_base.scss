@@ -7,6 +7,17 @@ $text-color: $dark-gray;
 
 $corner-rounding: 4px;
 
+footer{
+  font-size: .8em;
+  background-color: white;
+  border-radius: $corner-rounding;
+  span{display: none;}
+  padding: .5em;
+  ul{text-align: center;}
+  li{display: inline;}
+  margin-bottom: 1em;
+}
+
 a{
   color: $blue;
   &:visited{
@@ -49,14 +60,26 @@ h6{
   @extend %hx;
 }
 
+header{background-color: white;}
+
 h1.logo{
-  background-image: url('../images/logo.png');
+  background-image: url('http://www.hon.org/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&id=015A0000001PsN0IAK');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  width: 80%;
+  width: 100%;
   height: 80px;
   text-indent: -9999%;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 1.5em auto .5em auto;
+}
+
+nav{
+  ul{
+    li{
+      a{
+        color: $blue !important;
+      }
+    }
+  }
 }

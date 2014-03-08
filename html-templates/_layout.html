@@ -18,35 +18,36 @@
     <header>
       <a href="#menu" id="show-menu">menu</a>
       <a href="#search" id="show-search">search</a>
-      <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
     </header>
+    <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
     <!-- @RenderSection("featured", required: false) -->
     @RenderBody()
     <footer>
       <div class="footer--partners__poweredby">
-        <p><span class="hon_img img_title_poweredby"><span class="hon_span_hiden">Powered By</span></span></p>
+        <p>Powered By</p>
         <ul class="inline">
-          <li class="first"><a class="hon_img img_logos_hon" href="http://www.handsonconnect.org" target="_blank"><span class="hon_span_hiden">HandsOn Connect</span></a></li>
-          <li class="last"><a class="hon_img img_logos_honet" href="http://www.handsonnetwork.org" target="_blank"><span class="hon_span_hiden">HandsOn Network</span></a></li>
+          <li class="first"><a class="hon_img img_logos_hon" href="http://www.handsonconnect.org" target="_blank"><span class="hon_span_hiden">HandsOn Connect</span><img src="http://www.hon.org/resource/1360270460000/HOC__Site_Themes/Site_Themes/css/themes/default/logos_hon.png" alt=""></a></li>
+          <li class="last"><a class="hon_img img_logos_honet" href="http://www.handsonnetwork.org" target="_blank"><span class="hon_span_hiden">HandsOn Network</span><img src="http://www.hon.org/resource/1360270460000/HOC__Site_Themes/Site_Themes/css/themes/default/logos_honet.png" alt=""></a></li>
         </ul>
       </div>
       <div class="footer--partners__sponsors">
-        <a href="/HOC__Sponsors" target="_blank"><img src="/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&amp;id=015A0000001FM5VIAW" height="56" width="592"></a>
-        <a class="rover link_seeallsponsors" href="/HOC__Sponsors" target="_blank">See all sponsors</a>
+        <a class="rover link_seeallsponsors" href="http://hon.org/HOC__Sponsors" target="_blank">See our sponsors</a>
       </div>
       <div class="footer--copyright">
-        <p>©2014 Hands On Nashville, <label id="j_id0:Page:footerTxt">an affiliate of the <a target="_blank" href="http://www.handsonnetwork.org">HandsOn Network</a></label></p>
+        <p>©2014 Hands On Nashville, an affiliate of the <a target="_blank" href="http://www.handsonnetwork.org">HandsOn Network</a></p>
         <p>Hands On Nashville, 37 Peabody Street, Suite 206 | Nashville, TN 37210 <span class="hon_img img_footer_sep"></span> <a href="/HOC__Privacy_Policy" target="_blank">Privacy Policy</a> <span class="hon_img img_footer_sep"></span> <a href="/HOC__Terms_and_Conditions" target="_blank">Terms of Use</a></p>
       </div>
     </footer>
   </div>
   <section id="menu">
-    @Html.Partial("_LoginPartial")
     <nav id="nav">
+      <strong><a href="http://hon.org">View our desktop site</a></strong>
       <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li><a href="http://www.hon.org/HOC__Volunteer_Opportunity_Search_Page">Find An Opportunity</a></li>
+        <li><a href="http://www.hon.org/events">Special Events</a></li>
+        <li><a href="http://www.hon.org/HOC__Browse_Organizations_Page">Browse Organizations</a></li>
+        <li><a href="http://www.hon.org/Become_a_Volunteer">Become a Volunteer</a></li>
+        <li><a href="http://www.hon.org/youthleaders">Become a Youth Leader</a></li>
       </ul>
     </nav>
   </section>
@@ -70,11 +71,16 @@
     onCanvas();
     $('.date').waypoint(function(d){
       $('.date').removeClass('stuck');
-      console.log("help");
       if (d === "down")
         $(this).addClass('stuck');
     },
     {context: '#main'});
+    $('#signup').slideUp();
+    $('#signup-btn').click(function(e){
+      e.preventDefault();
+      $('#signup').slideDown();
+      $(this).hide();
+    });
   </script>
 </body>
 </html>

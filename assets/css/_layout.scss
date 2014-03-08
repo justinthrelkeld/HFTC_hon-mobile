@@ -21,7 +21,7 @@ body{
   #search, #menu{
     margin: 0 !important;
     padding: .5em;
-    background-color: $light-gray;
+    background-color: lighten($light-gray, 5%);
     @include media($mobile){
       @include span-columns($grid-columns/2);
     }

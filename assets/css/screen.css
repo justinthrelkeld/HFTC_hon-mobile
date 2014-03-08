@@ -1,4 +1,17 @@
 @import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+footer {
+  font-size: .8em;
+  background-color: white;
+  border-radius: 4px;
+  padding: .5em;
+  margin-bottom: 1em; }
+  footer span {
+    display: none; }
+  footer ul {
+    text-align: center; }
+  footer li {
+    display: inline; }
+
 a {
   color: #499ed1; }
   a:visited {
@@ -21,16 +34,22 @@ h3 {
 h4 {
   font-size: 1.3em; }
 
+header {
+  background-color: white; }
+
 h1.logo {
-  background-image: url("../images/logo.png");
+  background-image: url("http://www.hon.org/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&id=015A0000001PsN0IAK");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  width: 80%;
+  width: 100%;
   height: 80px;
   text-indent: -9999%;
   overflow: hidden;
-  margin: 0 auto; }
+  margin: 1.5em auto .5em auto; }
+
+nav ul li a {
+  color: #499ed1 !important; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -324,7 +343,7 @@ body {
   body #search, body #menu {
     margin: 0 !important;
     padding: .5em;
-    background-color: #dddddd;
+    background-color: #eaeaea;
     position: absolute;
     top: 0;
     color: #5f574f; }
