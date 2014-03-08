@@ -1,92 +1,40 @@
-<!-- REGISTRATION FORM -->
-<form action="/">
-  <!-- ABOUT YOU -->
-  <fieldset>
-    <!--<label for="first-name">First Name</label>-->
-    <input type="text" id="first-name" class="form-text" placeholder="First Name"/>
-  </fieldset>
+    <!-- REGISTRATION FORM -->
+    <form action="/">
+      <!-- ABOUT YOU -->
+      <fieldset>
+        <legend>Name</legend>
+        <input type="text" id="first-name" class="form-text" placeholder="First Name"/>
+        <input type="text" id="last-name" class="form-text" placeholder="Last Name"/>
+        <input type="date" id="dob">
+      </fieldset>
+      <!-- /ABOUT YOU -->
 
-  <fieldset>
-    <!--<label for="last-name">Last Name</label>-->
-    <input type="text" id="last-name" class="form-text" placeholder="Last Name"/>
-  </fieldset>
-  <div class="dob">
-    <fieldset>
-      <!-- <label for="month">Month</label> -->
-      <select id="month">
-        <option>Month</option>
-      </select>
-    </fieldset>
+      <!-- LOCATION -->
+      <fieldset>
+        <legend>Address</legend>
+        <input type="text" id="street" class="form-text" placeholder="Street Address"/>
+        <input type="text" id="city" class="form-text" placeholder="City"/>
+        <select id="state">
+          <option>State</option>
+        </select>
+        <input type="text" id="zip" class="form-text" placeholder="Zip Code"/>
+      </fieldset><!-- /LOCATION -->
 
-    <fieldset>
-      <!-- <label for="day">Day</label> -->
-      <select id="day">
-        <option>Day</option>
-      </select>
-    </fieldset>
+      <!-- EMAIL, PASSWORD & COMMUNICATION -->
+      <fieldset>
+        <legend>Login info</legend>
+        <input type="email" id="email" class="form-text" placeholder="Email Address"/>
+        <input type="password" id="password" class="form-text" placeholder="Password"/>
+      </fieldset>
 
-    <fieldset>
-      <!--<label for="year">Year</label>-->
-      <input type="text" id="year" class="form-text" placeholder="Year(YYYY)"/>
-    </fieldset>
-  </div><!-- /ABOUT YOU -->
+      <fieldset class="check" id="optins">
+        <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Nashville.</label>
+        <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Network.</label>
+      </fieldset><!-- /EMAIL, PASSWORD & COMMUNICATION -->
 
-  <!-- LOCATION -->
-
-  <fieldset>
-    <!--<label for="street">Home Street</label>-->
-    <input type="text" id="street" class="form-text" placeholder="Street Address"/>
-  </fieldset>
-
-  <fieldset>
-    <!-- <label for="city">Home City</label> -->
-    <input type="text" id="city" class="form-text" placeholder="City"/>
-  </fieldset>
-
-  <fieldset class="half">
-    <!-- <label for="state">State</label> -->
-    <select id="state">
-      <option>State</option>
-    </select>
-  </fieldset>
-
-  <fieldset class="half">
-    <!-- <label for="zip">Zip</label> -->
-    <input type="text" id="zip" class="form-text" placeholder="Zip Code"/>
-  </fieldset><!-- /LOCATION -->
-
-  <!-- EMAIL, PASSWORD & COMMUNICATION -->
-  <fieldset>
-    <!-- <label for="email">Email</label> -->
-    <input type="email" id="email" class="form-text" placeholder="Email Address"/>
-  </fieldset>
-
-  <fieldset>
-    <!-- <label for="retype-email">Retype Email Address</label> -->
-    <input type="email" id="retype-email" class="form-text" placeholder="Retype Email Address"/>
-  </fieldset>
-
-  <fieldset>
-    <!-- <label for="password">Password</label> -->
-    <input type="password" id="password" class="form-text" placeholder="Password"/>
-  </fieldset>
-
-  <fieldset>
-    <!-- <label for="retype-password">Retype Password</label> -->
-    <input type="password" id="retype-password" class="form-text" placeholder="Retype Password"/>
-  </fieldset>
-
-  <fieldset class="check">
-    <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Nashville.</label>
-  </fieldset>
-
-  <fieldset class="check">
-    <label><input type="checkbox" /> Yes, I'd like to receive communications from HandsOn Network.</label>
-  </fieldset><!-- /EMAIL, PASSWORD & COMMUNICATION -->
-
-  <!-- SUBMIT -->
-  <fieldset class="form-actions">
-    <p class="form-help">By clicking ‘Submit’ below, you are indicating your acceptance with the Terms and Conditions for this site. <a href="#" title="Terms and Conditions">Click Here to view the Terms And Conditions</a>.</p>
-    <input type="submit" value="Submit" />
-  </fieldset><!-- /SUBMIT -->
-</form><!-- /REGISTRATION FORM -->
+      <!-- SUBMIT -->
+      <fieldset class="form-actions">
+        <p class="form-help">By clicking ‘Submit’ below, you are indicating your acceptance with the Terms and Conditions for this site. <a href="#" title="Terms and Conditions">Click Here to view the Terms And Conditions</a>.</p>
+        <input type="submit" value="Create Account" />
+      </fieldset><!-- /SUBMIT -->
+    </form><!-- /REGISTRATION FORM -->
