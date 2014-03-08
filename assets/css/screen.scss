@@ -5,7 +5,7 @@
 @import "neat/neat";
 @import "bitters/bitters";
 
-$mobile: new-breakpoint(max-width 780px 4);
+$mobile: new-breakpoint(max-width 110000px 4);
 
 @import "layout";
 
