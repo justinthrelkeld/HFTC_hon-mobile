@@ -159,13 +159,13 @@ body{
   }
   #show-menu{
     &:before{
-      content: "\f053";
+      content: "\f0ca";
     }
   }
 
   #show-search{
     &:before{
-      content: "\f0ca";
+      content: "\f002";
     }
   }
 
@@ -201,7 +201,8 @@ body.show-search, body.show-menu{
       z-index: -10;
     }
     #show-search:before{
-      content: "\f0ca";
+      color: $green;
+      content: "\f002";
     }
   }
 
@@ -213,7 +214,8 @@ body.show-search, body.show-menu{
       z-index: -10;
     }
     #show-menu:before{
-      content: "\f054";
+      color: $green;
+      content: "\f0ca";
     }
   }
 
