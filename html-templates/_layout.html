@@ -22,7 +22,7 @@
     </header>
     <!-- @RenderSection("featured", required: false) -->
     @RenderBody()
-            <footer>
+    <footer>
       <div class="footer--partners__poweredby">
         <p><span class="hon_img img_title_poweredby"><span class="hon_span_hiden">Powered By</span></span></p>
         <ul class="inline">
@@ -51,7 +51,15 @@
     </nav>
   </section>
   <section id="search">
-    <input type="text" />
+    <input type="text" placeholder="Search..." />
+    <fieldset>
+      <legend>Date Range</legend>
+      <label for="startdate">Start date</label>
+      <input id="startdate" name="startdate" type="date" placeholder="Start Date" />
+      <label for="enddate">End date</label>
+      <input type="date" name="enddate" id="enddate" placeholder="End Date" />
+    </fieldset>
+    <input type="submit" value="Find events" />
   </section>
 
   <!--
@@ -60,5 +68,13 @@
   -->
   <script>
     onCanvas();
+    $('.date').waypoint(function(d){
+      $('.date').removeClass('stuck');
+      console.log("help");
+      if (d === "down")
+        $(this).addClass('stuck');
+    },
+    {context: '#main'});
   </script>
 </body>
+</html>
