@@ -9,15 +9,20 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
   -->
+  <link rel="stylesheet" href="assets/css/screen.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/site.js"></script>
 </head>
 <body class="oncanvas">
   <div id="main">
     <header>
+      <a href="#menu" id="show-menu">menu</a>
+      <a href="#search" id="show-search">search</a>
       <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
     </header>
     <!-- @RenderSection("featured", required: false) -->
     @RenderBody()
-    <footer>
+            <footer>
       <div class="footer--partners__poweredby">
         <p><span class="hon_img img_title_poweredby"><span class="hon_span_hiden">Powered By</span></span></p>
         <ul class="inline">
@@ -35,23 +40,25 @@
       </div>
     </footer>
   </div>
-  <section id="login">
+  <section id="menu">
     @Html.Partial("_LoginPartial")
+    <nav id="nav">
+      <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+      </ul>
+    </nav>
   </section>
   <section id="search">
     <input type="text" />
   </section>
-  <nav id="nav">
-    <ul id="menu">
-      <li>@Html.ActionLink("Home", "Index", "Home")</li>
-      <li>@Html.ActionLink("About", "About", "Home")</li>
-      <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-  </nav>
 
   <!--
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
   -->
+  <script>
+    onCanvas();
+  </script>
 </body>
-</html>
