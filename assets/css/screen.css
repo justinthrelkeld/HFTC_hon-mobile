@@ -583,6 +583,16 @@ form {
       width: 100%;
       padding: 0.9375em; }
 
+.fa.fail, .fa.succeed {
+  font-size: 7em;
+  margin: 0 auto;
+  display: block;
+  width: 1em;
+  background-color: inherit; }
+
+.fa.succeed {
+  color: #a6bb19; }
+
 .day {
   *zoom: 1;
   max-width: 68em;

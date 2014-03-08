@@ -52,3 +52,16 @@ form {
     }
   }
 }
+
+.fa.fail, .fa.succeed{
+  font-size: 7em;
+  margin: 0 auto;
+  display: block;
+  width: 1em;
+  background-color: inherit;
+}
+.fa.fail{
+}
+.fa.succeed{
+  color: $green;
+}
