@@ -5,13 +5,13 @@
 @import "neat/neat";
 @import "bitters/bitters";
 
+$mobile: new-breakpoint(max-width 780px 4);
+
+@import "layout";
+
 // Pages
 @import "pages/globals";
 @import "pages/calendar";
 @import "pages/event";
 @import "pages/login";
 @import "pages/register";
-
-$mobile: new-breakpoint(max-width 480px 4);
-
-@import "layout";
