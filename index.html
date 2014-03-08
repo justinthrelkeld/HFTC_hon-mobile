@@ -19,7 +19,7 @@
       <a href="#menu" id="show-menu">menu</a>
       <a href="#search" id="show-search">search</a>
     </header>
-    <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
+    <h1 class="logo"><a href="#">@Html.ActionLink("your logo here", "Index", "Home")</a></h1>
     <!-- @RenderSection("featured", required: false) -->
 
     <!--DAY-->
@@ -256,7 +256,7 @@
       <label for="enddate">End date</label>
       <input type="date" name="enddate" id="enddate" placeholder="End Date" />
     </fieldset>
-    <input type="submit" value="Find events" />
+    <input type="submit" id="search-submit" class="btn" value="Find events" />
   </section>
 
   <!--
@@ -277,7 +277,22 @@
       $('#signup').slideDown();
       $(this).hide();
     });
-    
+    var today = new Date();
+
+    var todayDate = [];
+    todayDate[0] = today.getFullYear();
+    todayDate[1] = today.getMonth() + 1;
+    todayDate[2] = today.getDay();
+    today = todayDate[0] + '-' + todayDate[1] + '-' + todayDate[2];
+
+    $('#startdate, #enddate').val(today);
+    $('#startdate').on('change', function(){
+      $('#enddate').val($(this).val());
+    });
+    $('#search-submit').click(function(){
+      $('body').removeClass('show-search');
+      $('body').addClass('waiting');
+    });
   </script>
 </body>
 </html>

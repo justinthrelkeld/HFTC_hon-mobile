@@ -81,6 +81,22 @@
       $('#signup').slideDown();
       $(this).hide();
     });
+    var today = new Date();
+
+    var todayDate = [];
+    todayDate[0] = today.getFullYear();
+    todayDate[1] = today.getMonth() + 1;
+    todayDate[2] = today.getDay();
+    today = todayDate[0] + '-' + todayDate[1] + '-' + todayDate[2];
+
+    $('#startdate, #enddate').val(today);
+    $('#startdate').on('change', function(){
+      $('#enddate').val($(this).val());
+    });
+    $('#search-submit').click(function(){
+      $('body').removeClass('show-search');
+      $('body').addClass('waiting');
+    });
   </script>
 </body>
 </html>
