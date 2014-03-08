@@ -3,15 +3,19 @@
   margin-bottom: em(30);
   position: relative;
   overflow: hidden;
+  // background-color: lighten($green, 50);
 
   .date {
+    color: $blue;
     font-weight: normal;
     line-height: 100%;
     position: absolute;
     text-align: center;
-    background-color: $light-gray;
+    background-color: white;
     z-index: 10;
+    // width: calc(100% - 82.9404%);
     &.stuck{
+      // width: calc(100% - 82.9404%);
       top: 0px;
       position: fixed;
       z-index: 5;

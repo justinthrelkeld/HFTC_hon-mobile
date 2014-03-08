@@ -1,4 +1,7 @@
 @import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+body.waiting #main * {
+  opacity: .7; }
+
 footer {
   font-size: .8em;
   background-color: white;
@@ -13,11 +16,11 @@ footer {
     display: inline; }
 
 a {
-  color: #499ed1; }
+  color: #3ba6ed; }
   a:visited {
-    color: #499ed1; }
+    color: #3ba6ed; }
   a:hover {
-    color: #a8b400 !important; }
+    color: #a6bb19 !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia; }
@@ -37,7 +40,7 @@ h4 {
 header {
   background-color: white; }
 
-h1.logo {
+h1.logo a {
   background-image: url("http://www.hon.org/servlet/servlet.ImageServer?oid=00DA00000009smOMAQ&id=015A0000001PsN0IAK");
   background-repeat: no-repeat;
   background-size: contain;
@@ -46,10 +49,20 @@ h1.logo {
   height: 80px;
   text-indent: -9999%;
   overflow: hidden;
-  margin: 1.5em auto .5em auto; }
+  margin: 1.5em auto .5em auto;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#search input {
+  box-shadow: 0px 0px 3px #3ba6ed;
+  margin-top: 2em; }
+#search fieldset input {
+  box-shadow: none;
+  margin-top: 0; }
 
 nav ul li a {
-  color: #499ed1 !important; }
+  color: #3ba6ed !important; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -346,7 +359,7 @@ body {
     background-color: #eaeaea;
     position: absolute;
     top: 0;
-    color: #5f574f; }
+    color: #49443e; }
     @media screen and (max-width: 110000px) {
       body #search, body #menu {
         float: left;
@@ -356,7 +369,7 @@ body {
         body #search:last-child, body #menu:last-child {
           margin-right: 0; } }
     body #search a, body #menu a {
-      color: #5f574f; }
+      color: #49443e; }
   body #search {
     left: 0; }
     body #search ul li {
@@ -366,7 +379,7 @@ body {
   body #menu {
     right: 0; }
     body #menu li {
-      background-color: #5f574f;
+      background-color: #49443e;
       border-radius: 100%;
       margin-right: .5em; }
   body #main {
@@ -385,7 +398,7 @@ body {
     height: 100%;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
-    background-color: #dddddd; }
+    background-color: white; }
     body #main:last-child {
       margin-right: 0; }
   body #content {
@@ -486,7 +499,7 @@ body ul.menu {
   body.show-search #menu {
     z-index: -10; }
   body.show-search #show-search:before {
-    color: #a8b400;
+    color: #a6bb19;
     content: "\f002"; }
 
   body.show-menu #main {
@@ -494,7 +507,7 @@ body ul.menu {
   body.show-menu #search {
     z-index: -10; }
   body.show-menu #show-menu:before {
-    color: #a8b400;
+    color: #a6bb19;
     content: "\f0ca"; }
 
   #main {
@@ -584,11 +597,12 @@ form {
   .day:after {
     clear: both; }
   .day .date {
+    color: #477dca;
     font-weight: normal;
     line-height: 100%;
     position: absolute;
     text-align: center;
-    background-color: #dddddd;
+    background-color: white;
     z-index: 10; }
     .day .date.stuck {
       top: 0px;
