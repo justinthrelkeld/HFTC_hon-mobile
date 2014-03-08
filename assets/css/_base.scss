@@ -7,6 +7,16 @@ $text-color: $dark-gray;
 
 $corner-rounding: 4px;
 
+a{
+  color: $blue;
+  &:visited{
+    color: $blue;
+  }
+  &:hover{
+    color: $green !important;
+  }
+}
+
 %body-copy{
   font-family: Lucida Grande;
   font-size: 12px;
