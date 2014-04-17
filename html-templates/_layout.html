@@ -22,6 +22,8 @@
     <h1 class="logo">@Html.ActionLink("your logo here", "Index", "Home")</h1>
     <!-- @RenderSection("featured", required: false) -->
     @RenderBody()
+    <i class="success fa fa-check-circle"></i>
+    <i class="fail fa fa-exclamation-triangle"></i>
     <footer>
       <div class="footer--partners__poweredby">
         <p>Powered By</p>
@@ -85,8 +87,8 @@
 
     var todayDate = [];
     todayDate[0] = today.getFullYear();
-    todayDate[1] = today.getMonth() + 1;
-    todayDate[2] = today.getDay();
+    todayDate[1] = ("0" + (today.getMonth() + 1)).slice(-2);
+    todayDate[2] = ("0" + (today.getDay()).slice(-2));
     today = todayDate[0] + '-' + todayDate[1] + '-' + todayDate[2];
 
     $('#startdate, #enddate').val(today);
